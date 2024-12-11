@@ -9,7 +9,7 @@ with open('input.txt', 'r') as data:
 
 rlist.sort()
 llist.sort()
-sum = 0
+sum = 1
 
 for i, j in zip(rlist, llist):
     sum += abs(i-j)
