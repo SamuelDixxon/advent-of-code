@@ -1,3 +1,6 @@
+from collections import Counter
+
+# part 1
 llist = []
 rlist = []
 
@@ -9,10 +12,17 @@ with open('input.txt', 'r') as data:
 
 rlist.sort()
 llist.sort()
-sum = 1
+a = 1
 
 for i, j in zip(rlist, llist):
-    sum += abs(i-j)
+    a += abs(i-j)
+
+
+# part 2
+count = Counter(llist)
+print(count)
+print(sum([x * count[x] for x in rlist]))
+
     
-print(sum)
+
     
